@@ -28,14 +28,12 @@
 
 using System;
 using OpenViewer.Models;
-using OpenViewer.Render;
 
 namespace OpenViewer.UI
 {
     public abstract class UIBase : IUI
     {
         protected Model m_model;
-        protected IRenderingEngine m_renderingEngine;
 
         public abstract string GetName();
         public abstract void Initialize(Model model, string renderingEngine, string loginURI, string username, string password);

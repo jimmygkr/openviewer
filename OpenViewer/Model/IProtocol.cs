@@ -28,13 +28,32 @@
 
 using System;
 using OpenViewer.Framework;
-using OpenViewer.Models;
 
-namespace OpenViewer.UI
+namespace OpenViewer.Protocol
 {
-    public interface IUI : IPlugin
+    public enum ChatType : byte
     {
-        void Initialize(Model model, string renderingEngine, string loginURI, string username, string password);
-        void Run();
+        Whisper = 0,
+        Say = 1,
+        Shout = 2
+    }
+
+    public delegate void Connected(Object sender);
+    public delegate void Chat(string message, string fromName, ChatType type, Guid id, Guid ownerid, Vector3f position);
+    public delegate void LandPatch(int x, int y, int width, float[] data);
+
+    public interface IProtocol : IPlugin
+    {
+        bool Login(string loginURI, string username, string password);
+        void Logout();
+
+        bool Connected { get; }
+        
+        void Say(string message);
+        void Shout(string message);
+
+        event Chat OnChat;
+        event Connected OnConnected;
+        event LandPatch OnLandPatch;
     }
 }
