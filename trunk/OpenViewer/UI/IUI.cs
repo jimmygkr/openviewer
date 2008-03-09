@@ -28,13 +28,13 @@
 
 using System;
 using OpenViewer.Framework;
-using OpenViewer.Models;
+using OpenViewer.Model;
 
 namespace OpenViewer.UI
 {
     public interface IUI : IPlugin
     {
-        void Initialize(Model model, string renderingEngine, string loginURI, string username, string password);
+        void Initialize(MetaverseSession model, string renderingEngine, string loginURI, string username, string password);
         void Run();
     }
 }
