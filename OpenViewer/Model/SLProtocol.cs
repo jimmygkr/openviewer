@@ -31,7 +31,7 @@ using libsecondlife;
 using OpenViewer.Framework;
 using OpenViewer.Protocol;
 
-namespace OpenViewer.Protocol.SL
+namespace OpenViewer.Model
 {
     public class SLProtocol : IProtocol
     {

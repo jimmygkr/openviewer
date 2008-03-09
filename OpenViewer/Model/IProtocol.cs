@@ -29,7 +29,7 @@
 using System;
 using OpenViewer.Framework;
 
-namespace OpenViewer.Protocol
+namespace OpenViewer.Model
 {
     public enum ChatType : byte
     {

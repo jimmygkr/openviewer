@@ -27,16 +27,16 @@
  */
 
 using System;
-using OpenViewer.Models;
+using OpenViewer.Model;
 
 namespace OpenViewer.UI
 {
     public abstract class UIBase : IUI
     {
-        protected Model m_model;
+        protected MetaverseSession m_model;
 
         public abstract string GetName();
-        public abstract void Initialize(Model model, string renderingEngine, string loginURI, string username, string password);
+        public abstract void Initialize(MetaverseSession model, string renderingEngine, string loginURI, string username, string password);
         public abstract void Run();
     }
 }

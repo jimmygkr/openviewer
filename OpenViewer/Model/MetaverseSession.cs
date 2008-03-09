@@ -31,15 +31,15 @@ using System.Collections.Generic;
 using OpenViewer.Protocol;
 using OpenViewer.Framework;
 
-namespace OpenViewer.Models
+namespace OpenViewer.Model
 {
-    public class Model
+    public class MetaverseSession
     {
         private IProtocol m_protocol;
 
         public Dictionary<int, float[]> LandMaps = new Dictionary<int, float[]>();
 
-        public Model(IProtocol protocol)
+        public MetaverseSession(IProtocol protocol)
         {
             m_protocol = protocol;
 
