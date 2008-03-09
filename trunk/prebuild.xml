@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Prebuild xmlns="http://dnpb.sourceforge.net/schemas/prebuild-1.7.xsd" version="1.7">
+  <Solution name="OpenViewer" activeConfig="Debug" path="./" version="0.1">
+    <Configuration name="Debug">
+      <Options>
+        <CompilerDefines>TRACE;DEBUG</CompilerDefines>
+        <OptimizeCode>false</OptimizeCode>
+        <CheckUnderflowOverflow>false</CheckUnderflowOverflow>
+        <AllowUnsafe>false</AllowUnsafe>
+        <WarningLevel>4</WarningLevel>
+        <WarningsAsErrors>false</WarningsAsErrors>
+        <SuppressWarnings></SuppressWarnings>
+        <OutputPath>bin</OutputPath>
+        <DebugInformation>true</DebugInformation>
+        <IncrementalBuild>true</IncrementalBuild>
+        <NoStdLib>false</NoStdLib>
+      </Options>
+    </Configuration>
+    <Configuration name="Release">
+      <Options>
+        <CompilerDefines>TRACE</CompilerDefines>
+        <OptimizeCode>true</OptimizeCode>
+        <CheckUnderflowOverflow>false</CheckUnderflowOverflow>
+        <AllowUnsafe>false</AllowUnsafe>
+        <WarningLevel>4</WarningLevel>
+        <WarningsAsErrors>false</WarningsAsErrors>
+        <SuppressWarnings></SuppressWarnings>
+        <OutputPath>bin</OutputPath>
+        <DebugInformation>false</DebugInformation>
+        <IncrementalBuild>true</IncrementalBuild>
+        <NoStdLib>false</NoStdLib>
+      </Options>
+    </Configuration>
+
+    <Project name="OpenViewer.Framework" path="OpenViewer/Framework" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../bin/</ReferencePath>
+      <Reference name="System" localCopy="false"/>
+      <Reference name="log4net"/>
+      <Files>
+        <Match pattern="*.cs" recurse="true"/>
+      </Files>
+    </Project>
+
+    <Project name="OpenViewer.Protocol" path="OpenViewer/Protocol" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../bin/</ReferencePath>
+      <Reference name="System" localCopy="false"/>
+      <Reference name="log4net"/>
+      <Reference name="OpenViewer.Framework"/>
+      <Files>
+        <Match pattern="*.cs" recurse="false"/>
+      </Files>
+    </Project>
+
+    <Project name="OpenViewer.Protocol.SL" path="OpenViewer/Protocol/SL" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../../bin/Protocol/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../../bin/Protocol/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../../bin/</ReferencePath>
+      <Reference name="System" localCopy="false"/>
+      <Reference name="libsecondlife.dll"/>
+      <Reference name="log4net"/>
+      <Reference name="OpenViewer.Framework"/>
+      <Reference name="OpenViewer.Protocol"/>
+      <Files>
+        <Match pattern="*.cs" recurse="true"/>
+      </Files>
+    </Project>
+
+    <Project name="OpenViewer.Models" path="OpenViewer/Models" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../bin/</ReferencePath>
+      <Reference name="System" localCopy="false"/>
+      <Reference name="log4net"/>
+      <Reference name="OpenViewer.Framework"/>
+      <Reference name="OpenViewer.Protocol"/>
+      <Files>
+        <Match pattern="*.cs" recurse="true"/>
+      </Files>
+    </Project>
+
+    <Project name="OpenViewer.Render" path="OpenViewer/Render" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../bin/</ReferencePath>
+      <Reference name="System" localCopy="false"/>
+      <Reference name="log4net"/>
+      <Reference name="OpenViewer.Framework"/>
+      <Reference name="OpenViewer.Models"/>
+      <Files>
+        <Match pattern="*.cs" recurse="false"/>
+      </Files>
+    </Project>
+
+    <Project name="OpenViewer.Render.ConsolePlugin" path="OpenViewer/Render/ConsolePlugin" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../../bin/Render/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../../bin/Render/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../../bin/</ReferencePath>
+      <Reference name="System" localCopy="false"/>
+      <Reference name="OpenViewer.Models"/>
+      <Reference name="OpenViewer.Render"/>
+      <Reference name="OpenViewer.Framework"/>
+      <Reference name="OpenViewer.Protocol"/>
+      <Files>
+        <Match pattern="*.cs" recurse="true"/>
+      </Files>
+    </Project>
+
+    <Project name="OpenViewer.Render.MogrePlugin" path="OpenViewer/Render/MogrePlugin" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../../bin/Render/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../../bin/Render/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../../bin/</ReferencePath>
+      <Reference name="System" localCopy="false"/>
+      <Reference name="System.Windows.Forms"/>
+      <Reference name="System.Drawing"/>
+      <Reference name="OpenViewer.Framework"/>
+      <Reference name="OpenViewer.Models"/>
+      <Reference name="OpenViewer.Render"/>
+      <Reference name="Mogre"/>
+      <Reference name="MogreFramework"/>
+      <Files>
+        <Match pattern="*.cs" recurse="true"/>
+      </Files>
+    </Project>
+
+    <Project name="OpenViewer.UI" path="OpenViewer/UI" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../bin/</ReferencePath>
+      <Reference name="System" localCopy="false"/>
+      <Reference name="log4net"/>
+      <Reference name="OpenViewer.Framework"/>
+      <Reference name="OpenViewer.Models"/>
+      <Reference name="OpenViewer.Render"/>
+      <Files>
+        <Match pattern="*.cs" recurse="false"/>
+      </Files>
+    </Project>
+
+    <Project name="OpenViewer.UI.WinForms" path="OpenViewer/UI/WinForms" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../../bin/UI/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../../bin/UI/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../../bin/</ReferencePath>
+      <Reference name="System" localCopy="false"/>
+      <Reference name="System.Windows.Forms" />
+      <Reference name="System.Drawing"/>
+      <Reference name="OpenViewer.Framework"/>
+      <Reference name="OpenViewer.UI"/>
+      <Reference name="OpenViewer.Models"/>
+      <Reference name="OpenViewer.Render"/>
+      <Files>
+        <Match pattern="*.cs" recurse="true"/>
+      </Files>
+    </Project>
+
+    <Project name="OpenViewer.UI.Gtk" path="OpenViewer/UI/Gtk" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../../bin/UI/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../../bin/UI/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../../bin/</ReferencePath>
+      <Reference name="System" localCopy="false"/>
+      <?if OS = "UNIX" ?>
+      <Reference name="atk-sharp" version="2.8.0.0" />
+      <Reference name="gdk-sharp" version="2.8.0.0" />
+      <Reference name="glade-sharp" version="2.8.0.0" />
+      <Reference name="gtk-sharp" version="2.8.0.0" />
+      <Reference name="glib-sharp" version="2.8.0.0" />
+      <?elseif OS = "MACOSX" ?>
+      <Reference name="atk-sharp" path="/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/gtk-sharp-2.0" />
+      <Reference name="gdk-sharp" path="/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/gtk-sharp-2.0" />
+      <Reference name="glade-sharp" path="/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/gtk-sharp-2.0" />
+      <Reference name="gtk-sharp" path="/Library/Frameworks//Mono.framework/Versions/Current/lib/mono/gtk-sharp-2.0" />
+      <Reference name="glib-sharp" path="/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/gtk-sharp-2.0" />
+      <?else ?>
+      <Reference name="atk-sharp" />
+      <Reference name="gdk-sharp" />
+      <Reference name="glade-sharp" />
+      <Reference name="glib-sharp" />
+      <Reference name="gtk-sharp" />
+      <?endif ?>
+      <Reference name="OpenViewer.Framework"/>
+      <Reference name="OpenViewer.UI"/>
+      <Reference name="OpenViewer.Models"/>
+      <Reference name="OpenViewer.Render"/>
+      <Files>
+        <Match pattern="*.cs" recurse="true"/>
+      </Files>
+    </Project>
+
+    <Project name="OpenViewer.UI.Console" path="OpenViewer/UI/Console" type="Library">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../../bin/UI/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../../bin/UI/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../../bin/</ReferencePath>
+      <Reference name="System" localCopy="false"/>
+      <Reference name="OpenViewer.Framework"/>
+      <Reference name="OpenViewer.UI"/>
+      <Reference name="OpenViewer.Models"/>
+      <Reference name="OpenViewer.Render"/>
+      <Files>
+        <Match pattern="*.cs" recurse="true"/>
+      </Files>
+    </Project>
+
+    <Project name="OpenViewer" path="OpenViewer/Application" type="Exe">
+      <Configuration name="Debug">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+      <Configuration name="Release">
+        <Options>
+          <OutputPath>../../bin/</OutputPath>
+        </Options>
+      </Configuration>
+
+      <ReferencePath>../../bin/</ReferencePath>
+      <Reference name="System" localCopy="false"/>
+      <Reference name="System.Windows.Forms"/>
+      <Reference name="Nini.dll"/>
+      <Reference name="OpenViewer.Framework"/>
+      <Reference name="OpenViewer.UI"/>
+      <Reference name="OpenViewer.Protocol"/>
+      <Reference name="OpenViewer.Render"/>
+      <Reference name="OpenViewer.Models"/>
+      <Reference name="log4net"/>
+      <Files>
+        <Match pattern="*.cs" recurse="true"/>
+      </Files>
+    </Project>
+  </Solution>
+</Prebuild>

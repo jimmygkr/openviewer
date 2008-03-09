@@ -1,0 +1,12 @@
+The following people have contributed code to OpenViewer
+(Thank you for your effort!)
+
+OpenViewer Developers 
+* adjohn
+* afrisby
+* chi11ken
+* mw
+* joha1 (Johan Berntsson, 3Di)
+
+Patches
+*
