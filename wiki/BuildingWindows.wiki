@@ -8,7 +8,7 @@ A short explanation on how to get OpenViewer compiled and running on a windows m
 
 = Details =
 
-You'll want a compiler something like Visual C# Express http://www.microsoft.com/express/vcsharp/ which is free , Visual Studio 2008 or Vistual Studio 2005.
+You'll want a compiler something like  [http://www.microsoft.com/express/vcsharp/ Visual C# Express]which is free , Visual Studio 2008 or Visual Studio 2005.
 
 if not installed. Install the compiler of your choice. Beware, The project files created are only tested with visual studio.
 
