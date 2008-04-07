@@ -1,0 +1,35 @@
+#labels Featured,Phase-Implementation,Phase-Deploy,Phase-Requirements
+#Getting Started on Windows
+
+= Introduction =
+
+A short explanation on how to get OpenViewer compiled and running on a windows machine.
+
+
+= Details =
+
+You'll want a compiler something like Visual C# Express http://www.microsoft.com/express/vcsharp/ which is free , Visual Studio 2008 or Vistual Studio 2005.
+
+if not installed. Install the compiler of your choice. Beware, The project files created are only tested with visual studio.
+
+You'll want to get a gtk# runtime as well. 2.10.3 works
+http://sourceforge.net/project/showfiles.php?group_id=74626&package_id=223067
+
+If not installed, install this.
+
+You'll also want to get the most recent source from the svn. http://openviewer.org/svn/openviewer/trunk
+If you don't have it already a good client for svn is TortoiseSVN http://tortoisesvn.net/downloads
+
+When that is downloaded if you are using Visual C# Express Edition 2008 or Visual Studio 2008, run the runprebuild2008.bat file. If you are using Visual Studio 2005 use runprebuild.bat.
+
+in the bin directory open the OpenViewer.ini.example file. Comment out the 
+rendering_engine = ogredotnet line and uncomment the rendering_engine = mogre line.
+
+Now building
+
+
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
