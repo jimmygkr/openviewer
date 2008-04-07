@@ -12,24 +12,16 @@ You'll want a compiler something like  [http://www.microsoft.com/express/vcsharp
 
 If not installed. Install the compiler of your choice. Beware, The project files that will be automatically created are only tested with Visual Studio.
 
-You'll want to get a [http://sourceforge.net/project/showfiles.php?group_id=74626&package_id=223067 GTK# runtime] as well. 2.10.3 works
+You'll want to get a [http://sourceforge.net/project/showfiles.php?group_id=74626&package_id=223067 GTK# runtime] as well. 2.10.3 works.
 
+If not installed, install the GTK# runtime now.
 
-If not installed, install this.
+You'll also want to get the most recent source from the svn at http://openviewer.org/svn/openviewer/trunk
+If you don't have it already a good client for [http://subversion.tigris.org/ subversion] is [http://tortoisesvn.net/downloads TortoiseSVN].
 
-You'll also want to get the most recent source from the svn. http://openviewer.org/svn/openviewer/trunk
-If you don't have it already a good client for svn is TortoiseSVN http://tortoisesvn.net/downloads
+After that is downloaded, if you are using Visual C# Express Edition 2008 or Visual Studio 2008, run the runprebuild2008.bat file. If you are using Visual Studio 2005 use runprebuild.bat.
 
-When that is downloaded if you are using Visual C# Express Edition 2008 or Visual Studio 2008, run the runprebuild2008.bat file. If you are using Visual Studio 2005 use runprebuild.bat.
+In the bin directory open the OpenViewer.ini.example file. Comment out the 
+{{{rendering_engine = ogredotnet}}} line with a semicolon (;) and uncomment the {{{rendering_engine = mogre}}} line by removing the semicolon.
 
-in the bin directory open the OpenViewer.ini.example file. Comment out the 
-rendering_engine = ogredotnet line and uncomment the rendering_engine = mogre line.
-
-Now building
-
-
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Load the Openviewer.sln and build the project.
